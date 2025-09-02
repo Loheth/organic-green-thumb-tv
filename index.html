@@ -1,37 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Organic Green Thumb TV</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Green Thumb TV</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/0d0d0d/8c9e78?text=Your+Background+Image');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .modal {
+            display: none;
+        }
+        .modal.is-active {
+            display: flex;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Organic Green Thumb TV</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="learn.html">Learn</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<body class="text-gray-200 bg-gray-900">
 
-  <section class="hero">
-    <h1>Grow Smart. Grow Right. Grow Green.</h1>
-    <p>Organic soil, supplies, and education for Ohio growers.</p>
-    <a href="shop.html" class="btn">Shop Soil</a>
-    <a href="learn.html" class="btn">Learn to Grow</a>
-  </section>
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-400 flex items-center space-x-2">
+                <!-- Logo SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke-dasharray="0 5" fill="none" stroke="currentColor"/>
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke-dasharray="0 5" fill="none" stroke="currentColor" transform="rotate(60, 12, 12)"/>
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke-dasharray="0 5" fill="none" stroke="currentColor" transform="rotate(120, 12, 12)"/>
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke-dasharray="0 5" fill="none" stroke="currentColor" transform="rotate(180, 12, 12)"/>
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke-dasharray="0 5" fill="none" stroke="currentColor" transform="rotate(240, 12, 12)"/>
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke-dasharray="0 5" fill="none" stroke="currentColor" transform="rotate(300, 12, 12)"/>
+                </svg>
+                <span>Green Thumb TV</span>
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="#about" class="text-gray-400 hover:text-green-400 font-medium transition duration-300">About</a>
+                <a href="#services" class="text-gray-400 hover:text-green-400 font-medium transition duration-300">Services</a>
+                <a href="#book" class="bg-red-600 text-white px-4 py-2 rounded-full font-semibold shadow-md hover:bg-red-700 transition duration-300 transform hover:scale-105">Book a Call</a>
+            </div>
+        </nav>
+    </header>
 
-  <section class="container">
-    <h2>Welcome to Organic Green Thumb TV</h2>
-    <p>We provide high-quality organic soil and essential growing supplies. Plus, we teach you how to grow cannabis legally in Ohio with easy-to-follow guides and videos.</p>
-  </section>
+    <!-- Hero Section -->
+    <main class="hero-bg">
+        <section class="hero-overlay container mx-auto px-6 py-20 lg:py-32 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-green-400 leading-tight mb-4">
+                Grow Your Own Garden, <br>The Organic Way.
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Discover the joy of legal, home-grown cannabis with our personalized one-on-one Zoom consultations. We'll guide you from seed to harvest, all while staying compliant with Ohio law.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#book" class="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-red-700 transition duration-300 transform hover:scale-105">Book Your Consultation</a>
+                <a href="#learn" class="text-red-600 px-8 py-4 rounded-full font-bold text-lg border-2 border-red-600 hover:bg-gray-800 transition duration-300 transform hover:scale-105">Learn More</a>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>📧 Email: yourname@email.com | 📞 Phone: (123) 456-7890</p>
-    <p>© 2025 Organic Green Thumb TV | For educational purposes only</p>
-  </footer>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-green-400 mb-12">Who We Are</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+                <div class="w-full md:w-1/2">
+                    <img src="https://placehold.co/800x600/1e293b/d1d5db?text=Expert+Consultant" alt="A friendly person explaining organic growing" class="rounded-3xl shadow-lg transform hover:scale-105 transition duration-500 w-full h-auto">
+                </div>
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <p class="text-lg text-gray-400 leading-relaxed mb-4">
+                        Organic Green Thumb TV is dedicated to empowering Ohio residents to cultivate their own cannabis gardens safely and legally. We believe in organic methods that produce high-quality, clean, and potent plants. Our founder is a certified expert with years of experience in hydroponics, soil cultivation, and pest management.
+                    </p>
+                    <p class="text-lg text-gray-400 leading-relaxed">
+                        Our mission is to simplify the growing process and provide you with the knowledge to succeed. We focus on a hands-on, personalized approach to ensure you get the most out of your growing journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-green-400 mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center justify-center h-16 w-16 bg-gray-700 text-green-400 rounded-full mb-6 mx-auto">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm-8 4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8-8 3.58-8 8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-100 mb-4">Getting Started</h3>
+                    <p class="text-gray-400 text-center">
+                        Perfect for beginners. We'll walk you through the basics of setting up your grow space, choosing equipment, and selecting the right strains.
+                    </p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center justify-center h-16 w-16 bg-gray-700 text-green-400 rounded-full mb-6 mx-auto">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.752a.25.25 0 01.248.25v2.5a.25.25 0 01-.248.25H14m0-3v3m0 0H9a2 2 0 01-2-2v-1.5a2 2 0 012-2h5m-2-2h2.5a.5.5 0 01.5.5v1.5a.5.5 0 01-.5.5H12"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-100 mb-4">Troubleshooting Session</h3>
+                    <p class="text-gray-400 text-center">
+                        Experienced growers hit roadblocks too. We'll diagnose issues like nutrient deficiencies, pests, and environmental problems.
+                    </p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-gray-900 rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex items-center justify-center h-16 w-16 bg-gray-700 text-green-400 rounded-full mb-6 mx-auto">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6m-9-6a9 9 0 1118 0 9 9 0 01-18 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-center text-gray-100 mb-4">Ohio Law Compliance</h3>
+                    <p class="text-gray-400 text-center">
+                        Understand the legal landscape in Ohio. We'll ensure your grow operation is fully compliant and secure, providing peace of mind.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action & Booking Form Section -->
+    <section id="book" class="py-20 bg-green-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Start Your Garden?</h2>
+            <p class="text-lg mb-8 max-w-3xl mx-auto">
+                Book a personalized one-on-one Zoom consultation with our expert. We'll answer all your questions and help you plan your ideal grow setup.
+            </p>
+            <div class="max-w-lg mx-auto bg-gray-900 p-8 rounded-3xl shadow-xl">
+                <form id="bookingForm" class="space-y-6">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 text-gray-800">
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 text-gray-800">
+                    </div>
+                    <div>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your growing goals and any specific questions you have." required class="w-full px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 text-gray-800"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-red-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-red-700 transition duration-300 transform hover:scale-105">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Message Modal -->
+    <div id="messageModal" class="modal fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
+        <div class="bg-gray-800 rounded-3xl p-8 shadow-xl text-center max-w-sm w-full transform transition-transform duration-300 ease-out scale-95">
+            <svg class="h-16 w-16 text-green-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h3 class="text-2xl font-bold mb-2">Thank you!</h3>
+            <p class="text-gray-400 mb-6">Your request has been submitted. We'll be in touch soon to schedule your consultation.</p>
+            <button id="closeModal" class="bg-red-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-red-700 transition duration-300">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2023 Organic Green Thumb TV. All rights reserved.</p>
+            <p class="text-sm mt-2">Disclaimer: This website and its services are for educational purposes only. Users are responsible for understanding and complying with all local and state laws regarding cannabis cultivation in Ohio.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Form Submission -->
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get the modal and the close button
+            const modal = document.getElementById('messageModal');
+            const closeModalBtn = document.getElementById('closeModal');
+
+            // Show the modal
+            modal.classList.add('is-active');
+
+            // Close modal when the close button is clicked
+            closeModalBtn.addEventListener('click', function() {
+                modal.classList.remove('is-active');
+            });
+
+            // Optional: You could send form data to a server here.
+            // For now, we'll just show the success message.
+            console.log('Form submitted successfully!');
+            
+            // You can also reset the form after successful submission
+            this.reset();
+        });
+    </script>
 </body>
 </html>
